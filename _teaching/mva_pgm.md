@@ -3,9 +3,8 @@ title: "Introduction to Probabilistic Graphical Models"
 collection: teaching
 venue: "M2 Mathématiques / Vision / Apprentissage"
 date: 2024-01-01
-# type: ""
-# permalink: ""
-# date: 2021-01-01
+type: "Teaching Assistant"
+permalink: /teaching/probabilistic-graphical-models
 location: "ENS Paris Saclay"
 ---
 [Course content here](https://lmbp.uca.fr/~latouche/mva/IntroductiontoProbabilisticGraphicalModelsMVA.html)
