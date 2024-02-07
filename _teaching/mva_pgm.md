@@ -1,9 +1,10 @@
 ---
 title: "Introduction to Probabilistic Graphical Models"
 collection: teaching
+venue: "M2 Mathématiques / Vision / Apprentissage"
+date: "2023-2024"
 # type: ""
 # permalink: ""
-venue: "M2 Mathématiques / Vision / Apprentissage"
 # date: 2021-01-01
 location: "ENS Paris Saclay"
 ---
