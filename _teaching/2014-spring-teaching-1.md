@@ -4,7 +4,7 @@ collection: teaching
 type: "Teaching Assistant of the class taught by Pierre Latouche and Pierre-Alexandre Mattei"
 permalink: https://lmbp.uca.fr/~latouche/mva/IntroductiontoProbabilisticGraphicalModelsMVA.html
 venue: "M2 MVA Mathématiques / Vision / Apprentissage"
-date: 2023-2024
+date: 2024
 location: "Paris Saclay"
 ---
 <!-- 
