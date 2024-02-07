@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Rémi Khellaf"
-  avatar           : "images/remi_boulogne20.jpeg"
+  avatar           : "remi_boulogne20.jpeg"
   bio              : "PhD student in Statistics and ML at Inria."
   location         : "Montpellier, France"
   employer         :
