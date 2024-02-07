@@ -2,7 +2,7 @@
 title: "Introduction to Probabilistic Graphical Models"
 collection: teaching
 venue: "M2 Mathématiques / Vision / Apprentissage"
-date: "2023-2024"
+date: 2024-01-01
 # type: ""
 # permalink: ""
 # date: 2021-01-01
