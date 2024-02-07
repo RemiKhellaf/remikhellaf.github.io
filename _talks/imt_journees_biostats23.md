@@ -2,7 +2,7 @@
 title: "Journées de Biostatistiques 2023"
 collection: talks
 type: "Talk"
-permalink: "https://indico.math.cnrs.fr/event/9989/"
+permalink: imt23
 venue: "Institut de Mathématiques de Toulouse"
 date: 2023-11-17
 location: "Toulouse, France"
@@ -10,6 +10,7 @@ location: "Toulouse, France"
 
 Here is the abstract of my talk, which is about the use of Instrumental Variables estimators in Causal Inference, and based from my internship prior to my PhD at Inria, in collaboration with Quinten Health.
 
+======
 In this work, we provide a comprehensive theoretical and empirical exploration of the integration of instrumental variables (IV) in causal analysis. Specifically, we focus on the estimation of the Average Treatment Effect (ATE) when confronted with the challenge of unmeasured confounding variables.
 
 We begin by introducing the conceptual foundations and methodological underpinnings of the IV estimator, highlighting the critical assumptions, potential violations, and strategies for mitigating such violations. Comparative simulations involving well-known ATE estimators, including Inverse Propensity Score Weighting, the G-Formula, and IV estimation, are presented, demonstrating their performance across a diverse range of scenarios.
