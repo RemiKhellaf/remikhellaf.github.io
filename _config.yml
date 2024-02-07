@@ -214,10 +214,10 @@ defaults:
       path: ""
       type: teaching
     values:
-      layout: single
+      layout: default
       author_profile: true
-      share: true
-      comments: true
+      share: false
+      comments: false
   # _publications
   - scope:
       path: ""
