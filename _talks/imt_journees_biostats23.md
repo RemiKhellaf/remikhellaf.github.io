@@ -2,7 +2,7 @@
 title: "Journées de Biostatistiques 2023"
 collection: talks
 type: "Talk"
-permalink: https://indico.math.cnrs.fr/event/9989/
+permalink: "https://indico.math.cnrs.fr/event/9989/"
 venue: "Institut de Mathématiques de Toulouse"
 date: 2023-11-17
 location: "Toulouse, France"
