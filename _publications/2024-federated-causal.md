@@ -7,7 +7,7 @@ date: 2024-10-18
 venue: 'Arxiv'
 slidesurl: 'http://remikhellaf.github.io/files/federated_causal_inference_khellaf.pdf'
 paperurl: 'http://arxiv.org/abs/2410.16870'
-# citation: 'Khellaf R., Bellet A., Josse J. (2024). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+citation: 'Khellaf R., Bellet A., Josse J. (2024). &quot;Federated Causal Inference: Multi-sources ATE estimation.&quot; <i>Conference 1</i>. 1(1).'
 ---
 
 [Download paper here](https://arxiv.org/pdf/2410.16870)
