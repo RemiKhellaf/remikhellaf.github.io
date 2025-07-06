@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Journées de Biostatistiques 2023"
 collection: talks
 type: "Talk"
@@ -19,4 +19,4 @@ Then, acknowledging that practitioners often rely on the sometimes unrealistic l
 
 Our findings reveal challenges in ATE estimation using IV in scenarios with limited sample sizes and the inherent complexity of interpreting results in nonparametric approaches, where the target population for LATE estimation may remain unidentified solely based on available data.
 
-In conclusion, this presentation aims at gaining a comprehensive understanding of when and how to judiciously incorporate instrumental variables into causal analysis, leading to more accurate and insightful conclusions.
+In conclusion, this presentation aims at gaining a comprehensive understanding of when and how to judiciously incorporate instrumental variables into causal analysis, leading to more accurate and insightful conclusions. -->

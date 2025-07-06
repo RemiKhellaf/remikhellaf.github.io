@@ -12,6 +12,6 @@ citation: 'Khellaf, R., Bellet, A., & Josse, J. (2025). Federated Causal Inferen
 
 [Download paper here](https://arxiv.org/pdf/2410.16870)
 
-<!-- [Download slides here](http://remikhellaf.github.io/files/federated_causal_inference_khellaf.pdf) -->
+[Download slides here](http://remikhellaf.github.io/files/federated_observational_khellaf.pdf)
 
 <!-- Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1). -->
