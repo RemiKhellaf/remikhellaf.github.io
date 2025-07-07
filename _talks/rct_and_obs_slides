@@ -1,26 +1,11 @@
 ---
-layout: page # Or whatever layout your academic template uses for full pages (e.g., 'default', 'home')
-title: "Presentations"
-permalink: /presentations/ # Or /talks/ if you prefer that URL
+# title: "Presentations"
+# collection: talks
+# type: "Talk"
+# permalink: imt23
+# venue: "Institut de Mathématiques de Toulouse"
+# date: 2023-11-17
+# location: "Toulouse, France"
+layout: default
 ---
-
-## Selected Presentations
-
-<div class="presentation-block">
-    <h3>Multi-study ATE estimation in RCT and Observational studies</h3>
-    <p>Description/Abstract (optional): This presentation discussed methods for estimating Average Treatment Effects (ATE) across multiple studies, encompassing both Randomized Controlled Trials (RCTs) and observational studies.</p>
-    <p>
-        [slides](http://remikhellaf.github.io/files/federated_rct_obs_khellaf.pdf)
-    </p>
-</div>
-<!-- 
-<div class="presentation-block">
-    <h3>Another Talk Title Here</h3>
-    <p><strong>Venue:</strong> Another University/Conference</p>
-    <p><strong>Date:</strong> January 1, 2024</p>
-    <p><strong>Location:</strong> City, Country</p>
-    <p>Description/Abstract (optional): A brief description of this talk.</p>
-    <p>
-        [slides](http://example.com/link-to-another-slides.pdf)
-    </p>
-</div> -->
+Multi-study ATE estimation in RCT and Observational studies: [slides](http://remikhellaf.github.io/files/federated_rct_obs_khellaf.pdf)
