@@ -1,11 +1,11 @@
 ---
-# title: "Presentations"
-# collection: talks
-# type: "Talk"
-# permalink: imt23
-# venue: "Institut de Mathématiques de Toulouse"
-# date: 2023-11-17
-# location: "Toulouse, France"
-layout: default
+title: "Presentations"
+collection: talks
+type: "Talk"
+permalink: pcic25
+venue: "Pacific Causal Inference Conference"
+date: 2025-07-07
+location: "Beijing, China"
+# layout: talk
 ---
 Multi-study ATE estimation in RCT and Observational studies: [slides](http://remikhellaf.github.io/files/federated_rct_obs_khellaf.pdf)
