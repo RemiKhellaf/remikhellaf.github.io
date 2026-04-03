@@ -10,7 +10,7 @@ paperurl: 'http://arxiv.org/pdf/2410.16870'
 citation: 'Khellaf R., Bellet A., Josse J. (2024). &quot;Federated Causal Inference: Multi-sources ATE estimation.&quot; <i>Conference Article</i>.'
 ---
 
-<!-- [Download paper here](https://arxiv.org/pdf/2410.16870) -->
+[Download paper here](https://arxiv.org/pdf/2410.16870)
 
 [Download slides here](http://remikhellaf.github.io/files/federated_causal_inference_khellaf.pdf)
 
