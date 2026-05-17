@@ -1,108 +1,79 @@
-
-# coding: utf-8
-
-# # Publications markdown generator for academicpages
-# 
-# Takes a TSV of publications with metadata and converts them for use with [academicpages.github.io](academicpages.github.io). This is an interactive Jupyter notebook, with the core python code in publications.py. Run either from the `markdown_generator` folder after replacing `publications.tsv` with one that fits your format.
-# 
-# TODO: Make this work with BibTex and other databases of citations, rather than Stuart's non-standard TSV format and citation style.
-# 
-
-# ## Data format
-# 
-# The TSV needs to have the following columns: pub_date, title, venue, excerpt, citation, site_url, and paper_url, with a header at the top. 
-# 
-# - `excerpt` and `paper_url` can be blank, but the others must have values. 
-# - `pub_date` must be formatted as YYYY-MM-DD.
-# - `url_slug` will be the descriptive part of the .md file and the permalink URL for the page about the paper. The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-DD-[url_slug]`
-
-
-# ## Import pandas
-# 
-# We are using the very handy pandas library for dataframes.
-
-# In[2]:
-
 import pandas as pd
+import os
 
-
-# ## Import TSV
-# 
-# Pandas makes this easy with the read_csv function. We are using a TSV, so we specify the separator as a tab, or `\t`.
-# 
-# I found it important to put this data in a tab-separated values format, because there are a lot of commas in this kind of data and comma-separated values can get messed up. However, you can modify the import statement, as pandas also has read_excel(), read_json(), and others.
-
-# In[3]:
-
+# Import TSV
+# Note: Ensure your TSV now includes 'status' and 'slides_url' columns.
 publications = pd.read_csv("publications.tsv", sep="\t", header=0)
-publications
 
-
-# ## Escape special characters
-# 
-# YAML is very picky about how it takes a valid string, so we are replacing single and double quotes (and ampersands) with their HTML encoded equivilents. This makes them look not so readable in raw format, but they are parsed and rendered nicely.
-
-# In[4]:
+# Fill empty values with an empty string so they don't print as 'nan'
+publications = publications.fillna("")
 
 html_escape_table = {
     "&": "&amp;",
     '"': "&quot;",
     "'": "&apos;"
-    }
+}
 
 def html_escape(text):
     """Produce entities within text."""
-    return "".join(html_escape_table.get(c,c) for c in text)
+    return "".join(html_escape_table.get(c, c) for c in str(text))
 
-
-# ## Creating the markdown files
-# 
-# This is where the heavy lifting is done. This loops through all the rows in the TSV dataframe, then starts to concatentate a big string (```md```) that contains the markdown for each type. It does the YAML metadata first, then does the description for the individual page. If you don't want something to appear (like the "Recommended citation")
-
-# In[5]:
-
-import os
 for row, item in publications.iterrows():
+    md_filename = str(item.pub_date) + "-" + str(item.url_slug) + ".md"
+    html_filename = str(item.pub_date) + "-" + str(item.url_slug)
     
-    md_filename = str(item.pub_date) + "-" + item.url_slug + ".md"
-    html_filename = str(item.pub_date) + "-" + item.url_slug
-    year = item.pub_date[:4]
+    # 1. Clean Variables
+    title = item.title
+    excerpt = html_escape(item.excerpt)
+    venue = html_escape(item.venue)
+    citation = html_escape(item.citation)
     
-    ## YAML variables
+    # Use .get() to avoid crashing if columns are accidentally missing
+    paper_url = str(item.get('paper_url', '')).strip()
+    slides_url = str(item.get('slides_url', '')).strip()
+    status = str(item.get('status', 'Accepted')).strip() # Defaults to Accepted
     
-    md = "---\ntitle: \""   + item.title + '"\n'
+    # 2. Build Minimalist YAML Frontmatter
+    md  = "---\n"
+    md += f"title: \"{title}\"\n"
+    md += "collection: publications\n"
+    md += f"type: '{status}'\n" # This lets you group Preprints vs Accepted in Jekyll
+    md += f"permalink: /publication/{html_filename}\n"
     
-    md += """collection: publications"""
-    
-    md += """\npermalink: /publication/""" + html_filename
-    
-    if len(str(item.excerpt)) > 5:
-        md += "\nexcerpt: '" + html_escape(item.excerpt) + "'"
-    
-    md += "\ndate: " + str(item.pub_date) 
-    
-    md += "\nvenue: '" + html_escape(item.venue) + "'"
-    
-    if len(str(item.paper_url)) > 5:
-        md += "\npaperurl: '" + item.paper_url + "'"
-    
-    md += "\ncitation: '" + html_escape(item.citation) + "'"
-    
-    md += "\n---"
-    
-    ## Markdown description for individual page
-    
-    if len(str(item.paper_url)) > 5:
-        md += "\n\n<a href='" + item.paper_url + "'>Download paper here</a>\n" 
+    if excerpt:
+        md += f"excerpt: '{excerpt}'\n"
         
-    if len(str(item.excerpt)) > 5:
-        md += "\n" + html_escape(item.excerpt) + "\n"
-        
-    md += "\nRecommended citation: " + item.citation
+    md += f"date: {item.pub_date}\n"
     
+    if venue:
+        md += f"venue: '{venue}'\n"
+        
+    # Commented out URLs in the YAML per your requested format
+    if slides_url:
+        md += f"# slidesurl: '{slides_url}'\n"
+        
+    if paper_url:
+        md += f"# paperurl: '{paper_url}'\n"
+        
+    md += f"citation: '{citation}'\n"
+    md += "---\n\n"
+    
+    # 3. Build Minimalist Markdown Body
+    if paper_url:
+        md += f"[Download paper here]({paper_url})\n\n"
+        
+    if slides_url:
+        md += f"[Download slides here]({slides_url})\n\n"
+        
+    # HTML commented citation per your requested format
+    md += f"<!-- Recommended citation: {citation} -->\n"
+    
+    # 4. Save File
     md_filename = os.path.basename(md_filename)
-       
-    with open("../_publications/" + md_filename, 'w') as f:
+    save_path = "../_publications/"
+    
+    # Ensure the directory exists
+    os.makedirs(save_path, exist_ok=True)
+    
+    with open(os.path.join(save_path, md_filename), 'w') as f:
         f.write(md)
-
-
