@@ -11,16 +11,6 @@ author_profile: true
 
 {% include base_path %}
 
-## Accepted Publications
-
-{% for post in site.publications reversed %}
-  {% if post.type == 'Accepted' %}
-    {% include archive-single.html %}
-  {% endif %}
-{% endfor %}
-
----
-
 ## Preprints
 
 {% for post in site.publications reversed %}
@@ -28,3 +18,15 @@ author_profile: true
     {% include archive-single.html %}
   {% endif %}
 {% endfor %}
+
+---
+
+## Published 
+
+{% for post in site.publications reversed %}
+  {% if post.type == 'Accepted' %}
+    {% include archive-single.html %}
+  {% endif %}
+{% endfor %}
+
+
