@@ -7,7 +7,7 @@ date: 2026-03-12
 venue: 'Arxiv'
 # slidesurl: 'http://remikhellaf.github.io/files/federated_causal_inference_khellaf.pdf'
 paperurl: 'https://arxiv.org/pdf/2505.20168'
-citation: 'Berenfeld, C., Boughdiri, A., Colnet, B., van Amsterdam, W. A., Bellet, A., Khellaf, R., Scornet, E. & Josse, J. (2025). Causal meta-analysis: Rethinking the foundations of evidence-based medicine.&quot; <i>Conference Article</i>.'
+citation: 'Berenfeld, C., Boughdiri, A., Colnet, B., van Amsterdam, W. A., Bellet, A., Khellaf, R., Scornet, E. & Josse, J. (2025). Causal meta-analysis: Rethinking the foundations of evidence-based medicine.&quot; <i>Journal Article</i>.'
 ---
 
 [Download paper here](https://arxiv.org/pdf/2505.20168)
