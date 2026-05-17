@@ -30,6 +30,12 @@ Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+Reviewing
+======
+* ICML 2026 (Top Reviewer Award)
+* Neurips 2026
+* ICLR 2025
   
 Talks
 ======
@@ -45,4 +51,4 @@ Teaching
 
 Misc
 ======
-<!-- * Music lover -->
+* I like to play classical and jazz music! I play the piano, saxophone and clarinet.
